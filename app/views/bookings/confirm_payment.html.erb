@@ -1,5 +1,5 @@
-<div class="container", style = "width: 500px">
-  <div class="d-flex flex-column align-items-center p-3 mt-3">
+<div class="flex-container py-4">
+  <div class="flex-item d-flex flex-column align-items-center p-3 mt-3">
       <h2 class="text-center mb-5">Your booking has been requested!</h2>
       <h3 class="mb-3 border-top border-bottom py-2">Your card will be charged <%= @booking.price * 0.15 %> IDR once <%= @booking.instructor.user.first_name.capitalize %> accepts the booking </h3>
       <div class="mt-3 mb-5">
@@ -10,6 +10,8 @@
       </ul>
     </div>
       <p>Purchase of <strong><%= @booking.package.title %></strong> for <strong><%= @booking.price * 0.15 %></strong></p>
-       <%= link_to "GO TO YOUR DASHBOARD", dashboard_path, id: "pay", class: "btn btn-primary" %>
-    </div>
+      <%= link_to "GO TO YOUR DASHBOARD", dashboard_path, id: "pay", class: "btn btn-primary" %>
   </div>
+  <div class="flex-item h-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_tag("https://res.cloudinary.com/apbdevries/image/upload/v1607410877/SHRED/Surfer-1_pcgxo1.jpg", width: 400, height: 300, crop: :fill) %>;">
+  </div>
+</div>

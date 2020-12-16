@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row py-4">
-    <div class="col">
+  <div class="flex-container py-4">
+    <div class="flex-item">
       <h1>Checkout summary</h1>
       <p>Purchase of <strong><%= @booking.package.title %></strong> for <strong><%= @booking.price %></strong></p>
       <button id="pay" class="btn btn-primary">Pay</button>
@@ -14,6 +14,8 @@
           });
         });
       </script>
+    </div>
+    <div class="flex-item h-100" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path("https://res.cloudinary.com/apbdevries/image/upload/v1607410877/SHRED/Surfer-1_pcgxo1.jpg", width: 400, height: 300, crop: :fill) %>;">
     </div>
   </div>
 </div>
